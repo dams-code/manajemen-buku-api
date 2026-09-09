@@ -27,6 +27,58 @@ Endpoint Manajemen buku sederhana menggunakan FastAPI, tanpa memakai database, d
 |PATCH | `/buku/{id}` | Update spesifik ke status ketersediaan buku |
 | DELETE | `/buku/{id}` | Menghapus buku |
 
+## Cara Clone dan Eksekusi Program
+
+### 1. Clone Repo
+
+```bash
+  git clone https://github.com/dams-code/manajemen-buku-api.git
+  cd manajemen-buku-api
+```
+
+### 2. Membuat Virtual Environment(env)
+Jika memakai Windows :
+```bash
+  python -m venv .venv
+  .venv\Scripts\activate
+```
+
+Jika memakai Linux / Mac:
+```bash
+  python3 -m venv .venv
+  source .venv/bin/activate
+```
+
+### 3. Install dependency
+
+```bash
+  pip install "fastapi[standard]"
+```
+
+### 4. Eksekusi FastAPI Server
+
+Jika memakai UV:
+```bash
+  uv run fastapi dev main.py
+```
+Jika memakai non-UV:
+```bash
+fastapi dev main.py
+```
+
+### 5. Cek endpoint dan uji coba endpoint di Swagger UI
+```bash
+  http://127.0.0.1:8000/docs#/
+```
+
+### 6. Test di tampilan frontend (mount html)
+
+karena lokasi middleware untuk mount index.htmlnya diset ke "/" untuk akses ke local pakai / diakhir port.
+
+```bash
+  http://127.0.0.1:8000/
+```
+
 ## Tech Stack
 
 ### Backend
